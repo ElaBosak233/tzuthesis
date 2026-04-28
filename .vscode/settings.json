@@ -1,0 +1,21 @@
+{
+	"tinymist.lint.enabled": true,
+	"tinymist.preview.cursorIndicator": true,
+	"tinymist.formatterMode": "typstyle",
+	"tinymist.onPaste": "$root/assets/images",
+	"tinymist.fontPaths": [
+		"${workspaceFolder}/assets/fonts"
+	],
+	"tinymist.outputPath": "$root/dist/$name",
+	"tinymist.previewFeature": "enable",
+	"tinymist.preview.refresh": "onType",
+	"[jsonc]": {
+		"editor.tabSize": 2,
+		"editor.insertSpaces": true,
+		"editor.defaultFormatter": "vscode.json-language-features",
+		"editor.formatOnSave": true
+	},
+	"[typst]": {
+		"editor.defaultFormatter": "myriad-dreamin.tinymist"
+	}
+}
