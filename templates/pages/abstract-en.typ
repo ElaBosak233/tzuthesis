@@ -2,17 +2,10 @@
 
 #let abstract-en-content = state("abstract-en", "")
 
-#let default-abstract-en-keywords = (
-  "Database Technology",
-  "Artificial Intelligence",
-  "Data Analysis and Processing",
-  "Semantic Analysis",
-)
-
-#let abstract-en-keywords = state("abstract-en-keywords", default-abstract-en-keywords.join("; "))
+#let abstract-en-keywords = state("abstract-en-keywords", "")
 
 #let abstract-en(
-  keywords: default-abstract-en-keywords,
+  keywords,
   body,
 ) = {
   context abstract-en-content.update(body)

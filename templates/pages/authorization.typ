@@ -17,7 +17,7 @@
 }
 
 #let authorization-page(
-  date: datetime.today(),
+  date,
 ) = {
   set page(numbering: "I")
 

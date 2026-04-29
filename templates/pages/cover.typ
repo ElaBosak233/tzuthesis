@@ -30,7 +30,7 @@
       ]
     ]
 
-    #text(font: fonts.黑体, size: sizes.二号, weight: "bold")[（#datetime.today().year()届）]
+    #text(font: fonts.黑体, size: sizes.二号, weight: "bold")[（#date.year()届）]
   ]
 
   v(2.5cm)

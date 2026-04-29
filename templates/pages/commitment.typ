@@ -9,7 +9,7 @@
 }
 
 #let commitment-page(
-  date: datetime.today(),
+  date,
 ) = {
   v(12pt)
 

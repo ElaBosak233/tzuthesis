@@ -22,7 +22,7 @@
   advisor: "李四",
   second-advisor: none,
   date: datetime.today(),
-  bibliography: bibliography.with("/ref.bib"),
+  bibliography: none,
   body,
 ) = {
   set page(
@@ -34,7 +34,7 @@
 
   pagebreak()
 
-  authorization-page()
+  authorization-page(date)
   abstract-page()
   abstract-en-page()
 
@@ -150,5 +150,5 @@
   acknowledgement-page()
 
   pagebreak()
-  commitment-page()
+  commitment-page(date)
 }

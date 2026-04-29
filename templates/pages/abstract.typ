@@ -4,17 +4,10 @@
 
 #let abstract-content = state("abstract", "")
 
-#let default-abstract-keywords = (
-  "数据库技术",
-  "人工智能",
-  "数据分析与处理",
-  "语义分析",
-)
-
-#let abstract-keywords = state("abstract-keywords", default-abstract-keywords.join("；"))
+#let abstract-keywords = state("abstract-keywords", "")
 
 #let abstract(
-  keywords: default-abstract-keywords,
+  keywords,
   body,
 ) = {
   context abstract-content.update(body)
