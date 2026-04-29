@@ -17,12 +17,12 @@
 
   set page(numbering: none)
 
-  image("/assets/brands/tzu.png", width: 2.85cm)
+  image("/assets/brands/tzu-logo.png", width: 2.85cm)
 
   v(0.4cm)
 
   align(center)[
-    #image("/assets/brands/tzu-title.png", width: 9.5cm)
+    #image("/assets/brands/tzu-text.svg", width: 9.5cm)
 
     #scale(x: 200%, y: 200%, reflow: true)[
       #scale(y: 50%, reflow: true)[

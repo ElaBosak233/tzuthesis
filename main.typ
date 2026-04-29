@@ -1,6 +1,5 @@
 #import "templates/thesis.typ": abstract, abstract-en, acknowledgement, authorization, commitment, thesis
 #import "templates/utils.typ": parencite, three-line-table
-#import "templates/fonts.typ": fonts
 
 #show: thesis.with(
   title: "基于 Typst 的台州学院学位论文模板",
