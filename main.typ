@@ -16,7 +16,7 @@
 )
 
 #authorization(
-  confidential: true,
+  confidential: false,
   student-signature: place(
     right + bottom,
     dx: -2.5cm,

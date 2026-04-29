@@ -43,9 +43,9 @@
     checked: false,
   ) = {
     if checked {
-      text(font: "Wingdings 2")[\u{00A3}]
-    } else {
       text(font: "Wingdings 2")[\u{0052}]
+    } else {
+      text(font: "Wingdings 2")[\u{00A3}]
     }
   }
 
