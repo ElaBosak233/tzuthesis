@@ -57,13 +57,15 @@
     body,
   ) = {
     set align(center)
+    set par(leading: 0.5em)
     rect(
       width: 100%,
-      inset: (x: 0pt, bottom: 0pt),
+      inset: (x: 0pt, bottom: 1pt),
       stroke: (bottom: 0.5pt + black),
       text(
         font: font,
         size: size,
+        top-edge: "ascender",
         bottom-edge: "descender",
         body,
       ),
@@ -76,6 +78,7 @@
 
     #grid(
       columns: (auto, 1fr),
+      align: bottom,
       gutter: 5pt,
       info-key[题#h(2em)目], info-value[#title],
     )
@@ -83,36 +86,42 @@
     #grid(
       columns: (auto, 1fr),
       gutter: 5pt,
+      align: bottom,
       info-key[学#h(2em)院], info-value[#school],
     )
 
     #grid(
       columns: (auto, 1fr),
       gutter: 5pt,
+      align: bottom,
       info-key[专#h(2em)业], info-value[#major],
     )
 
     #grid(
       columns: (auto, 1fr),
       gutter: 5pt,
+      align: bottom,
       info-key[班#h(2em)级], info-value[#class],
     )
 
     #grid(
       columns: (auto, 1fr),
       gutter: 5pt,
+      align: bottom,
       info-key[学#h(2em)号], info-value[#uid],
     )
 
     #grid(
       columns: (auto, 1fr),
       gutter: 5pt,
+      align: bottom,
       info-key[学生姓名], info-value[#student],
     )
 
     #grid(
       columns: (auto, 1fr),
       gutter: 5pt,
+      align: bottom,
       info-key[指导教师], info-value[#advisor],
     )
 
@@ -120,6 +129,7 @@
       grid(
         columns: (auto, 1fr),
         gutter: 5pt,
+        align: bottom,
         info-key[第二指导教师], info-value[#h(-2em)#second-advisor],
       )
     }
@@ -127,6 +137,7 @@
     #grid(
       columns: (auto, 1fr),
       gutter: 5pt,
+      align: bottom,
       info-key[完成日期], info-value[#date.display("[year]年[month]月")],
     )
   ]
