@@ -47,7 +47,7 @@
   show: show-cn-fakebold
 
   align(center)[
-    #set par(leading: 1.5em)
+    #set par(spacing: 1.5em, leading: 0em)
     #v(2em)
     #text(font: (fonts.main, fonts.黑体), size: sizes.三号)[
       #title
@@ -92,24 +92,29 @@
     let bottom = if it.level == 1 { 1em } else { 0.5em }
 
     v(top)
-    set text(font: (fonts.main, fonts.黑体), size: size, weight: "bold")
+    set text(font: (fonts.main, fonts.黑体), size: size, weight: "regular")
     it
     v(bottom)
   }
 
   set text(
     font: ((name: fonts.main, covers: "latin-in-cjk"), fonts.宋体),
-    size: sizes.小四,
+    size: sizes.五号,
     lang: "zh",
-    top-edge: 0.7em,
-    bottom-edge: -0.3em,
+    top-edge: "ascender",
+    bottom-edge: "descender",
   )
 
-  set par(first-line-indent: (amount: 2em, all: true), leading: 1em)
+  set par(first-line-indent: (amount: 2em, all: true), leading: 1.25em, spacing: 1.25em)
 
   show figure.where(
     kind: table,
   ): set figure.caption(position: top)
+
+  // 图表共享编号
+  show figure.where(kind: table): set figure(kind: image, supplement: [表])
+
+  show figure.where(kind: image): set figure(supplement: [图])
 
   set figure(
     numbering: n => {
@@ -129,6 +134,11 @@
     it
 
     v(0.5em)
+  }
+
+  show cite: it => {
+    set text(font: fonts.宋体, size: sizes.五号, baseline: -0.1em)
+    super(it)
   }
 
   body

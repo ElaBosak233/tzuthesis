@@ -31,6 +31,7 @@
     it
   }
 
+  // 这里更改 top-edge 和 bottom-edge 会影响目录中的 ...
   set text(font: (fonts.main, fonts.宋体), size: sizes.小四, top-edge: 1em, bottom-edge: 0em)
 
   set par(leading: 1em)

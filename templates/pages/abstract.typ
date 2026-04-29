@@ -2,11 +2,7 @@
 
 #import "../fonts.typ": fonts, sizes
 
-#let default-abstract-content = [
-  一般不超过300个汉字。内容应包括课题设计意义、完成的主要工作、形成的重要结论等。语言力求精炼，突出论文的主要成果及创新性。
-]
-
-#let abstract-content = state("abstract", default-abstract-content)
+#let abstract-content = state("abstract", "")
 
 #let default-abstract-keywords = (
   "数据库技术",
@@ -18,8 +14,8 @@
 #let abstract-keywords = state("abstract-keywords", default-abstract-keywords.join("；"))
 
 #let abstract(
-  body: default-abstract-content,
   keywords: default-abstract-keywords,
+  body,
 ) = {
   context abstract-content.update(body)
   context abstract-keywords.update(keywords.join("；"))

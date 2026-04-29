@@ -1,10 +1,6 @@
 #import "../fonts.typ": fonts, sizes
 
-#let default-abstract-en-content = [
-  The English version should be corresponding to the Chinese version.
-]
-
-#let abstract-en-content = state("abstract-en", default-abstract-en-content)
+#let abstract-en-content = state("abstract-en", "")
 
 #let default-abstract-en-keywords = (
   "Database Technology",
@@ -16,8 +12,8 @@
 #let abstract-en-keywords = state("abstract-en-keywords", default-abstract-en-keywords.join("; "))
 
 #let abstract-en(
-  body: default-abstract-en-content,
   keywords: default-abstract-en-keywords,
+  body,
 ) = {
   context abstract-en-content.update(body)
   context abstract-en-keywords.update(keywords.join("; "))
@@ -33,7 +29,7 @@
 
   v(18pt)
 
-  set text(font: fonts.main, size: sizes.小四, top-edge: 0.7em, bottom-edge: -0.3em)
+  set text(font: fonts.main, size: sizes.小四, lang: "en")
 
   set par(first-line-indent: (amount: 2.5em, all: true), leading: 1em)
 

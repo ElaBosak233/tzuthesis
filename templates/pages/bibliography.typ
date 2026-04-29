@@ -50,10 +50,12 @@
   }
 
   show grid.cell.where(x: 0): cell => {
-    text(baseline: -0.08em)[#cell]
+    text(font: fonts.宋体, size: sizes.小五)[#cell]
   }
 
   show grid.cell.where(x: 1): it => {
+    set text(font: fonts.宋体, size: sizes.小五)
+
     // 后续的操作是对 string 进行的。
     let ittext = to-string(it)
     // 判断是否为中文文献：去除特定词组后，仍有至少两个连续汉字。
@@ -165,7 +167,8 @@
     }
   }
 
-  set text(lang: "zh")
+  set par(leading: 0.5em, spacing: 0.5em)
+  set text(lang: "zh", top-edge: "ascender", bottom-edge: "descender")
 
   bib(
     title: none,

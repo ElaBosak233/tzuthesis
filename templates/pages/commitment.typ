@@ -20,7 +20,7 @@
 
   v(18pt)
 
-  set text(font: fonts.仿宋, size: sizes.三号, lang: "zh", top-edge: 0.7em, bottom-edge: -0.3em)
+  set text(font: fonts.仿宋, size: sizes.三号, lang: "zh", top-edge: "ascender", bottom-edge: "descender")
 
   [本人郑重承诺：]
 
