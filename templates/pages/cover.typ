@@ -19,8 +19,10 @@
 
   image("/assets/brands/tzu.png", width: 2.85cm)
 
+  v(0.4cm)
+
   align(center)[
-    #image("/assets/brands/tzu-title.png", width: 8cm)
+    #image("/assets/brands/tzu-title.png", width: 9.5cm)
 
     #scale(x: 200%, y: 200%, reflow: true)[
       #scale(y: 50%, reflow: true)[
@@ -31,7 +33,7 @@
     #text(font: fonts.黑体, size: sizes.二号, weight: "bold")[（#datetime.today().year()届）]
   ]
 
-  v(3cm)
+  v(2.5cm)
 
   let info-key(
     font: fonts.宋体,
@@ -69,7 +71,9 @@
   }
 
 
-  pad(left: 2cm)[
+  pad(left: 5em, right: 1em)[
+    #set par(leading: 1em, spacing: 1em)
+
     #grid(
       columns: (auto, 1fr),
       gutter: 5pt,

@@ -167,7 +167,7 @@
     }
   }
 
-  set par(leading: 0.5em, spacing: 0.5em)
+  set par(leading: 0.65em, spacing: 0.65em)
   set text(lang: "zh", top-edge: "ascender", bottom-edge: "descender")
 
   bib(
