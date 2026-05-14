@@ -47,7 +47,7 @@
   show: show-cn-fakebold
 
   align(center)[
-    #set par(spacing: 1.5em, leading: 0em)
+    #set par(spacing: 1em, leading: 1em)
     #v(2em)
     #text(font: (fonts.main, fonts.黑体), size: sizes.三号)[
       #title
@@ -123,6 +123,12 @@
       numbering("1-1", ch, n)
     },
   )
+
+  show heading.where(level: 1): it => {
+    counter(figure.where(kind: image)).update(0)
+    counter(figure.where(kind: table)).update(0)
+    it
+  }
 
   show figure.caption: it => {
     v(0.5em)
